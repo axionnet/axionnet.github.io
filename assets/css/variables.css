@@ -1,0 +1,82 @@
+<<<<<<< HEAD
+/*=========================================
+        AXIONNETWORK - VARIABLES
+=========================================*/
+
+:root{
+
+    /* Cores */
+
+    --background:#07070A;
+    --background-secondary:#111118;
+
+    --primary:#8A2BE2;
+    --primary-light:#B266FF;
+    --primary-dark:#5B21B6;
+
+    --white:#FFFFFF;
+    --gray:#BDBDBD;
+    --gray-dark:#7A7A7A;
+
+    /* Fonte */
+
+    --font:'Poppins', sans-serif;
+
+    /* Pesos */
+
+    --light:300;
+    --regular:400;
+    --medium:500;
+    --semibold:600;
+    --bold:700;
+
+    /* Bordas */
+
+    --radius:18px;
+
+    /* Transições */
+
+    --transition:.35s ease;
+
+=======
+/*=========================================
+        AXIONNETWORK - VARIABLES
+=========================================*/
+
+:root{
+
+    /* Cores */
+
+    --background:#07070A;
+    --background-secondary:#111118;
+
+    --primary:#8A2BE2;
+    --primary-light:#B266FF;
+    --primary-dark:#5B21B6;
+
+    --white:#FFFFFF;
+    --gray:#BDBDBD;
+    --gray-dark:#7A7A7A;
+
+    /* Fonte */
+
+    --font:'Poppins', sans-serif;
+
+    /* Pesos */
+
+    --light:300;
+    --regular:400;
+    --medium:500;
+    --semibold:600;
+    --bold:700;
+
+    /* Bordas */
+
+    --radius:18px;
+
+    /* Transições */
+
+    --transition:.35s ease;
+
+>>>>>>> 376630f8cc9561add2abd3463d9dde4049b5fb7a
+}
