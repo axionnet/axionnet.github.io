@@ -1,0 +1,33 @@
+axionnetworkv3/
+├── index.html
+├── pedido.html
+├── servicos.html
+├── clientes.html
+├── contato.html
+├── README.md
+├── SUPABASE.sql
+│
+├── assets/
+│   ├── css/
+│   │   ├── global.css
+│   │   ├── inicio.css
+│   │   ├── pedido.css
+│   │   ├── servicos.css
+│   │   ├── clientes.css
+│   │   └── responsivo.css
+│   │
+│   ├── js/
+│   │   ├── global.js
+│   │   ├── animacoes.js
+│   │   ├── cursor.js
+│   │   ├── flocos.js
+│   │   ├── menu.js
+│   │   ├── pedido.js
+│   │   ├── clientes.js
+│   │   └── supabase-config.js
+│   │
+│   ├── imagens/
+│   │   ├── logo.png
+│   │   └── favicon.png
+│   │
+│   └── icons/

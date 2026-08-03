@@ -1,0 +1,97 @@
+@media (max-width: 900px) {
+  body,
+  a,
+  button,
+  input,
+  select,
+  textarea { cursor: auto; }
+
+  .cursor-ponto,
+  .cursor-anel { display: none; }
+
+  .botao-menu { display: inline-flex; }
+
+  .menu-links {
+    position: fixed;
+    top: 76px;
+    left: 4%;
+    right: 4%;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 14px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 18px;
+    background: rgba(15, 10, 22, 0.98);
+    box-shadow: var(--sombra-roxa);
+  }
+
+  .menu-links.aberto { display: flex; }
+  .menu-links a { padding: 14px 12px; }
+  .menu-links a::after { display: none; }
+
+  .hero-conteudo,
+  .pedido-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-conteudo {
+    padding: 70px 0;
+    text-align: center;
+  }
+
+  .hero-texto p { margin-inline: auto; }
+  .hero-acoes { justify-content: center; }
+  .hero-visual { min-height: 390px; }
+
+  .grade-resumo,
+  .grade-servicos-completa {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cta-caixa,
+  .rodape-conteudo {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .secao { padding: 76px 0; }
+  .marca-imagem { width: 34px; height: 34px; }
+  .marca-texto { font-size: 0.9rem; }
+
+  .hero-texto h1 {
+    font-size: clamp(2.7rem, 15vw, 4.3rem);
+  }
+
+  .hero-visual { min-height: 330px; }
+  .nucleo { width: 135px; height: 135px; }
+  .nucleo svg { width: 58px; }
+
+  .grade-resumo,
+  .grade-servicos-completa,
+  .formulario-grid,
+  .modal-acoes {
+    grid-template-columns: 1fr;
+  }
+
+  .campo-completo,
+  .formulario-acoes { grid-column: 1; }
+  .formulario-acoes .botao { width: 100%; }
+
+  .pedido-info,
+  .pedido-formulario,
+  .modal,
+  .cta-caixa {
+    padding: 25px;
+  }
+
+  .rodape-conteudo { padding: 38px 0; }
+}
+
+@media (max-width: 640px) {
+  .contato-caixa { padding: 30px 22px; }
+  .contato-icone { width: 66px; height: 66px; }
+}
