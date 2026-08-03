@@ -1,0 +1,33 @@
+axionnetworkv3/
+├── .nojekyll
+├── index.html
+├── pedido.html
+├── servicos.html
+├── clientes.html
+├── contato.html
+├── robots.txt
+├── README.md
+├── GUIA-CLOUDFLARE.md
+├── SUPABASE.sql
+│
+└── assets/
+    ├── css/
+    │   ├── global.css
+    │   ├── inicio.css
+    │   ├── pedido.css
+    │   ├── servicos.css
+    │   ├── clientes.css
+    │   └── responsivo.css
+    │
+    ├── js/
+    │   ├── global.js
+    │   ├── animacoes.js
+    │   ├── flocos.js
+    │   ├── menu.js
+    │   ├── objeto-3d.js
+    │   ├── pedido.js
+    │   ├── clientes.js
+    │   └── supabase-config.js
+    │
+    └── imagens/
+        └── favicon.svg

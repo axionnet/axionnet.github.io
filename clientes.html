@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#07050b">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.supabase.co; connect-src 'self' https://*.supabase.co; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'; upgrade-insecure-requests">
+  <meta name="description" content="Avaliações de clientes da AxionNetwork.">
+  <title>Clientes | AxionNetwork</title>
+  <link rel="icon" href="assets/imagens/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/clientes.css">
+  <link rel="stylesheet" href="assets/css/responsivo.css">
+</head>
+<body>
+  <div class="particulas-fundo" data-flocos aria-hidden="true"></div>
+
+  <header class="cabecalho-site">
+    <nav class="navegacao container" aria-label="Navegação principal">
+      <a class="marca" href="index.html" aria-label="Página inicial da AxionNetwork">
+        <span class="marca-a" aria-hidden="true">A</span>
+        <span class="marca-texto"><strong>AXION</strong>NETWORK</span>
+      </a>
+
+      <button class="botao-menu" type="button" data-botao-menu aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+      </button>
+
+      <div class="menu-links" data-menu-links>
+        <a href="index.html">Início</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="pedido.html">Fazer pedido</a>
+        <a class="ativo" href="clientes.html">Clientes</a>
+        <a href="contato.html">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="clientes-hero secao">
+      <div class="container">
+        <div class="clientes-topo revelar">
+          <div>
+            <span class="sobretitulo">Experiências reais</span>
+            <h1>O que nossos clientes dizem</h1>
+            <p>Veja avaliações sobre os serviços da AxionNetwork e compartilhe sua própria experiência.</p>
+          </div>
+
+          <button class="botao botao-principal botao-avaliar" type="button" data-abrir-avaliacao>
+            <span aria-hidden="true">★</span>
+            Fazer avaliação
+          </button>
+        </div>
+
+        <div class="resumo-avaliacoes revelar" aria-label="Resumo das avaliações">
+          <div>
+            <strong data-media-avaliacoes>5,0</strong>
+            <div class="estrelas-resumo" aria-hidden="true">★★★★★</div>
+            <small><span data-total-avaliacoes>0</span> avaliações</small>
+          </div>
+          <p>As avaliações ajudam novos clientes a conhecerem a qualidade do atendimento e dos serviços prestados.</p>
+        </div>
+
+        <div class="filtros-avaliacoes revelar">
+          <label for="filtro-servico">Filtrar por serviço</label>
+          <select id="filtro-servico" data-filtro-servico>
+            <option value="todos">Todos os serviços</option>
+            <option value="Criação de Sites">Criação de Sites</option>
+            <option value="Redes e Wi-Fi">Redes e Wi-Fi</option>
+            <option value="Manutenção de Computadores">Manutenção de Computadores</option>
+            <option value="Suporte para Celulares">Suporte para Celulares</option>
+            <option value="Câmeras e Segurança">Câmeras e Segurança</option>
+            <option value="Soluções Personalizadas">Soluções Personalizadas</option>
+          </select>
+        </div>
+
+        <div class="aviso-sucesso" data-aviso-avaliacao hidden role="status" aria-live="polite">
+          Avaliação enviada com sucesso. Ela aparecerá após a aprovação da equipe.
+        </div>
+
+        <section class="grade-avaliacoes" data-lista-avaliacoes aria-live="polite"></section>
+
+        <div class="estado-vazio" data-estado-vazio hidden>
+          <strong>Nenhuma avaliação encontrada</strong>
+          <p>Seja a primeira pessoa a avaliar este serviço.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-fundo" data-modal-avaliacao hidden>
+    <section class="modal-avaliacao" role="dialog" aria-modal="true" aria-labelledby="titulo-modal-avaliacao">
+      <button class="modal-fechar" type="button" data-fechar-avaliacao aria-label="Fechar">×</button>
+
+      <div class="modal-cabecalho">
+        <span>Nova avaliação</span>
+        <h2 id="titulo-modal-avaliacao">Conte como foi sua experiência</h2>
+        <p>Sua avaliação será enviada para análise antes de aparecer publicamente.</p>
+      </div>
+
+      <form id="formulario-avaliacao" novalidate>
+        <div class="formulario-grid">
+          <div class="campo">
+            <label for="avaliacao-nome">Nome</label>
+            <input id="avaliacao-nome" type="text" maxlength="60" autocomplete="name" placeholder="Seu nome" required>
+            <small class="erro-campo" data-erro="nome"></small>
+          </div>
+
+          <div class="campo">
+            <label for="avaliacao-servico">Serviço</label>
+            <select id="avaliacao-servico" required>
+              <option value="">Selecione</option>
+              <option>Criação de Sites</option>
+              <option>Redes e Wi-Fi</option>
+              <option>Manutenção de Computadores</option>
+              <option>Suporte para Celulares</option>
+              <option>Câmeras e Segurança</option>
+              <option>Soluções Personalizadas</option>
+            </select>
+            <small class="erro-campo" data-erro="servico"></small>
+          </div>
+
+          <fieldset class="campo campo-completo avaliacao-nota">
+            <legend>Sua nota</legend>
+            <div class="seletor-estrelas" role="radiogroup" aria-label="Nota de 1 a 5 estrelas">
+              <input id="estrela-5" type="radio" name="nota" value="5"><label for="estrela-5" aria-label="5 estrelas">★</label>
+              <input id="estrela-4" type="radio" name="nota" value="4"><label for="estrela-4" aria-label="4 estrelas">★</label>
+              <input id="estrela-3" type="radio" name="nota" value="3"><label for="estrela-3" aria-label="3 estrelas">★</label>
+              <input id="estrela-2" type="radio" name="nota" value="2"><label for="estrela-2" aria-label="2 estrelas">★</label>
+              <input id="estrela-1" type="radio" name="nota" value="1"><label for="estrela-1" aria-label="1 estrela">★</label>
+            </div>
+            <small class="erro-campo" data-erro="nota"></small>
+          </fieldset>
+
+          <div class="campo campo-completo">
+            <label for="avaliacao-texto">Avaliação</label>
+            <textarea id="avaliacao-texto" rows="5" maxlength="700" placeholder="Conte o que você achou do atendimento e do serviço..." required></textarea>
+            <div class="campo-rodape"><small class="erro-campo" data-erro="texto"></small><small><span data-contador-avaliacao>0</span>/700</small></div>
+          </div>
+
+          <div class="campo campo-completo">
+            <span class="label-foto">Foto opcional</span>
+            <label class="upload-foto" for="avaliacao-foto">
+              <input id="avaliacao-foto" type="file" accept="image/jpeg,image/png,image/webp" hidden>
+              <span class="upload-icone" aria-hidden="true">＋</span>
+              <span><strong>Adicionar foto</strong><small>JPG, PNG ou WebP. Máximo de 5 MB.</small></span>
+            </label>
+            <div class="preview-foto" data-preview-foto hidden>
+              <img data-preview-imagem alt="Pré-visualização da foto escolhida">
+              <button type="button" data-remover-foto>Remover foto</button>
+            </div>
+            <small class="erro-campo" data-erro="foto"></small>
+          </div>
+
+          <label class="confirmacao campo-completo">
+            <input id="avaliacao-consentimento" type="checkbox" required>
+            <span>Autorizo a publicação do meu nome, texto e foto nesta página.</span>
+          </label>
+          <small class="erro-campo campo-completo" data-erro="consentimento"></small>
+
+          <div class="formulario-acoes campo-completo">
+            <button class="botao botao-secundario" type="button" data-fechar-avaliacao>Cancelar</button>
+            <button class="botao botao-principal" type="submit" data-enviar-avaliacao>Publicar avaliação</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <footer class="rodape">
+    <div class="rodape-conteudo container">
+      <a class="marca" href="index.html"><span class="marca-texto"><strong>AXION</strong>NETWORK</span></a>
+      <p>© <span data-ano></span> AxionNetwork. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/global.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/flocos.js"></script>
+  <script src="assets/js/animacoes.js"></script>
+  <script src="assets/js/supabase-config.js"></script>
+  <script src="assets/js/clientes.js"></script>
+</body>
+</html>
